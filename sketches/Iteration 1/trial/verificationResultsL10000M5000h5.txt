@@ -1,0 +1,808 @@
+---------------------------
+Network parameters: L = 10000 , h = 0.5 , M = 5000
+Verification Threshold: gamma =  5.0 %
+---------------------------
+Trial #:  1
+Verification Time:  20.1 seconds
+Probability of Success Estimated:  98.09 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  1.91 %
+Running average verfication time:  20.10 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  2
+Verification Time:  18.02 seconds
+Probability of Success Estimated:  13.67 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  7.79 %
+Running average verfication time:  19.06 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  3
+Verification Time:  21.5 seconds
+Probability of Success Estimated:  3.59 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  6.39 %
+Running average verfication time:  19.87 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  4
+Verification Time:  19.76 seconds
+Probability of Success Estimated:  94.58 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  6.15 %
+Running average verfication time:  19.85 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  5
+Verification Time:  20.47 seconds
+Probability of Success Estimated:  98.50 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  5.22 %
+Running average verfication time:  19.97 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  6
+Verification Time:  19.32 seconds
+Probability of Success Estimated:  42.46 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  11.43 %
+Running average verfication time:  19.86 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  7
+Verification Time:  18.81 seconds
+Probability of Success Estimated:  73.19 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  13.62 %
+Running average verfication time:  19.71 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  8
+Verification Time:  19.1 seconds
+Probability of Success Estimated:  98.82 %
+Probability of Success Actual:  95.57 %
+Running average relaxation gap:  12.33 %
+Running average verfication time:  19.64 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  9
+Verification Time:  19.13 seconds
+Probability of Success Estimated:  11.69 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  12.26 %
+Running average verfication time:  19.58 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  10
+Verification Time:  18.13 seconds
+Probability of Success Estimated:  90.83 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  11.95 %
+Running average verfication time:  19.43 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  11
+Verification Time:  16.86 seconds
+Probability of Success Estimated:  99.36 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  10.92 %
+Running average verfication time:  19.20 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  12
+Verification Time:  17.43 seconds
+Probability of Success Estimated:  21.38 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  11.79 %
+Running average verfication time:  19.05 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  13
+Verification Time:  32.13 seconds
+Probability of Success Estimated:  38.49 %
+Probability of Success Actual:  40.47 %
+Running average relaxation gap:  11.04 %
+Running average verfication time:  20.06 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  14
+Verification Time:  18.37 seconds
+Probability of Success Estimated:  82.96 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  11.46 %
+Running average verfication time:  19.94 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  15
+Verification Time:  19.94 seconds
+Probability of Success Estimated:  89.36 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  11.41 %
+Running average verfication time:  19.94 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  16
+Verification Time:  105.17 seconds
+Probability of Success Estimated:  98.52 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  10.79 %
+Running average verfication time:  25.26 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  17
+Verification Time:  99.67 seconds
+Probability of Success Estimated:  95.68 %
+Probability of Success Actual:  89.39 %
+Running average relaxation gap:  10.53 %
+Running average verfication time:  29.64 sec
+Neural network passed verification: false positive!
+---------------------------
+Trial #:  18
+Verification Time:  81.56 seconds
+Probability of Success Estimated:  0.09 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.95 %
+Running average verfication time:  32.53 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  19
+Verification Time:  87.75 seconds
+Probability of Success Estimated:  0.22 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.43 %
+Running average verfication time:  35.43 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  20
+Verification Time:  95.81 seconds
+Probability of Success Estimated:  0.92 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.01 %
+Running average verfication time:  38.45 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  21
+Verification Time:  88.39 seconds
+Probability of Success Estimated:  83.43 %
+Probability of Success Actual:  78.64 %
+Running average relaxation gap:  8.81 %
+Running average verfication time:  40.83 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  22
+Verification Time:  78.68 seconds
+Probability of Success Estimated:  13.92 %
+Probability of Success Actual:  4.57 %
+Running average relaxation gap:  8.83 %
+Running average verfication time:  42.55 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  23
+Verification Time:  63.35 seconds
+Probability of Success Estimated:  99.68 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.46 %
+Running average verfication time:  43.45 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  24
+Verification Time:  119.38 seconds
+Probability of Success Estimated:  37.37 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.67 %
+Running average verfication time:  46.62 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  25
+Verification Time:  90.87 seconds
+Probability of Success Estimated:  0.52 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.30 %
+Running average verfication time:  48.39 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  26
+Verification Time:  95.39 seconds
+Probability of Success Estimated:  34.87 %
+Probability of Success Actual:  35.44 %
+Running average relaxation gap:  8.96 %
+Running average verfication time:  50.20 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  27
+Verification Time:  137.91 seconds
+Probability of Success Estimated:  3.39 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.76 %
+Running average verfication time:  53.44 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  28
+Verification Time:  37.25 seconds
+Probability of Success Estimated:  6.59 %
+Probability of Success Actual:  12.90 %
+Running average relaxation gap:  8.67 %
+Running average verfication time:  52.87 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  29
+Verification Time:  83.13 seconds
+Probability of Success Estimated:  89.80 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.72 %
+Running average verfication time:  53.91 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  30
+Verification Time:  59.9 seconds
+Probability of Success Estimated:  36.93 %
+Probability of Success Actual:  21.91 %
+Running average relaxation gap:  8.93 %
+Running average verfication time:  54.11 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  31
+Verification Time:  99.41 seconds
+Probability of Success Estimated:  27.52 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.53 %
+Running average verfication time:  55.57 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  32
+Verification Time:  83.83 seconds
+Probability of Success Estimated:  15.72 %
+Probability of Success Actual:  11.63 %
+Running average relaxation gap:  9.36 %
+Running average verfication time:  56.45 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  33
+Verification Time:  79.49 seconds
+Probability of Success Estimated:  0.04 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.08 %
+Running average verfication time:  57.15 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  34
+Verification Time:  107.62 seconds
+Probability of Success Estimated:  92.63 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.03 %
+Running average verfication time:  58.64 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  35
+Verification Time:  57.67 seconds
+Probability of Success Estimated:  88.76 %
+Probability of Success Actual:  88.31 %
+Running average relaxation gap:  8.79 %
+Running average verfication time:  58.61 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  36
+Verification Time:  62.27 seconds
+Probability of Success Estimated:  94.00 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.71 %
+Running average verfication time:  58.71 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  37
+Verification Time:  57.81 seconds
+Probability of Success Estimated:  25.09 %
+Probability of Success Actual:  16.45 %
+Running average relaxation gap:  8.71 %
+Running average verfication time:  58.69 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  38
+Verification Time:  53.06 seconds
+Probability of Success Estimated:  21.03 %
+Probability of Success Actual:  15.34 %
+Running average relaxation gap:  8.63 %
+Running average verfication time:  58.54 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  39
+Verification Time:  59.35 seconds
+Probability of Success Estimated:  88.82 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.69 %
+Running average verfication time:  58.56 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  40
+Verification Time:  67.41 seconds
+Probability of Success Estimated:  8.06 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.68 %
+Running average verfication time:  58.78 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  41
+Verification Time:  83.29 seconds
+Probability of Success Estimated:  6.58 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.62 %
+Running average verfication time:  59.38 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  42
+Verification Time:  94.29 seconds
+Probability of Success Estimated:  81.10 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.87 %
+Running average verfication time:  60.21 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  43
+Verification Time:  62.66 seconds
+Probability of Success Estimated:  54.35 %
+Probability of Success Actual:  65.47 %
+Running average relaxation gap:  8.92 %
+Running average verfication time:  60.27 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  44
+Verification Time:  76.74 seconds
+Probability of Success Estimated:  2.91 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.79 %
+Running average verfication time:  60.64 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  45
+Verification Time:  66.72 seconds
+Probability of Success Estimated:  6.12 %
+Probability of Success Actual:  13.82 %
+Running average relaxation gap:  8.76 %
+Running average verfication time:  60.78 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  46
+Verification Time:  65.95 seconds
+Probability of Success Estimated:  64.29 %
+Probability of Success Actual:  57.30 %
+Running average relaxation gap:  8.72 %
+Running average verfication time:  60.89 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  47
+Verification Time:  97.06 seconds
+Probability of Success Estimated:  64.14 %
+Probability of Success Actual:  58.26 %
+Running average relaxation gap:  8.66 %
+Running average verfication time:  61.66 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  48
+Verification Time:  67.69 seconds
+Probability of Success Estimated:  99.55 %
+Probability of Success Actual:  98.13 %
+Running average relaxation gap:  8.51 %
+Running average verfication time:  61.78 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  49
+Verification Time:  69.75 seconds
+Probability of Success Estimated:  82.94 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.69 %
+Running average verfication time:  61.95 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  50
+Verification Time:  94.13 seconds
+Probability of Success Estimated:  12.71 %
+Probability of Success Actual:  22.67 %
+Running average relaxation gap:  8.71 %
+Running average verfication time:  62.59 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  51
+Verification Time:  56.27 seconds
+Probability of Success Estimated:  15.72 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.85 %
+Running average verfication time:  62.47 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  52
+Verification Time:  78.17 seconds
+Probability of Success Estimated:  37.83 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.41 %
+Running average verfication time:  62.77 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  53
+Verification Time:  89.58 seconds
+Probability of Success Estimated:  0.11 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.23 %
+Running average verfication time:  63.27 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  54
+Verification Time:  54.71 seconds
+Probability of Success Estimated:  39.50 %
+Probability of Success Actual:  35.53 %
+Running average relaxation gap:  9.13 %
+Running average verfication time:  63.12 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  55
+Verification Time:  86.25 seconds
+Probability of Success Estimated:  95.46 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.05 %
+Running average verfication time:  63.54 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  56
+Verification Time:  66.22 seconds
+Probability of Success Estimated:  66.88 %
+Probability of Success Actual:  68.43 %
+Running average relaxation gap:  8.92 %
+Running average verfication time:  63.58 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  57
+Verification Time:  76.29 seconds
+Probability of Success Estimated:  88.55 %
+Probability of Success Actual:  85.89 %
+Running average relaxation gap:  8.81 %
+Running average verfication time:  63.81 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  58
+Verification Time:  68.85 seconds
+Probability of Success Estimated:  97.06 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.71 %
+Running average verfication time:  63.89 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  59
+Verification Time:  70.44 seconds
+Probability of Success Estimated:  13.89 %
+Probability of Success Actual:  0.61 %
+Running average relaxation gap:  8.78 %
+Running average verfication time:  64.00 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  60
+Verification Time:  104.94 seconds
+Probability of Success Estimated:  61.05 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.29 %
+Running average verfication time:  64.69 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  61
+Verification Time:  52.87 seconds
+Probability of Success Estimated:  14.62 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.37 %
+Running average verfication time:  64.49 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  62
+Verification Time:  60.2 seconds
+Probability of Success Estimated:  43.49 %
+Probability of Success Actual:  45.38 %
+Running average relaxation gap:  9.25 %
+Running average verfication time:  64.42 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  63
+Verification Time:  91.85 seconds
+Probability of Success Estimated:  72.20 %
+Probability of Success Actual:  69.00 %
+Running average relaxation gap:  9.16 %
+Running average verfication time:  64.86 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  64
+Verification Time:  60.88 seconds
+Probability of Success Estimated:  30.95 %
+Probability of Success Actual:  17.69 %
+Running average relaxation gap:  9.22 %
+Running average verfication time:  64.80 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  65
+Verification Time:  80.43 seconds
+Probability of Success Estimated:  95.54 %
+Probability of Success Actual:  89.92 %
+Running average relaxation gap:  9.16 %
+Running average verfication time:  65.04 sec
+Neural network passed verification: false positive!
+---------------------------
+Trial #:  66
+Verification Time:  98.04 seconds
+Probability of Success Estimated:  99.38 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.04 %
+Running average verfication time:  65.54 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  67
+Verification Time:  13.85 seconds
+Probability of Success Estimated:  99.71 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.90 %
+Running average verfication time:  64.77 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  68
+Verification Time:  15.23 seconds
+Probability of Success Estimated:  71.09 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.20 %
+Running average verfication time:  64.04 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  69
+Verification Time:  11.96 seconds
+Probability of Success Estimated:  94.22 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.15 %
+Running average verfication time:  63.28 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  70
+Verification Time:  14.5 seconds
+Probability of Success Estimated:  92.52 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  9.12 %
+Running average verfication time:  62.59 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  71
+Verification Time:  13.1 seconds
+Probability of Success Estimated:  97.37 %
+Probability of Success Actual:  94.83 %
+Running average relaxation gap:  9.03 %
+Running average verfication time:  61.89 sec
+Neural network passed verification: false positive!
+---------------------------
+Trial #:  72
+Verification Time:  14.67 seconds
+Probability of Success Estimated:  5.03 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.98 %
+Running average verfication time:  61.23 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  73
+Verification Time:  12.64 seconds
+Probability of Success Estimated:  22.52 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  9.16 %
+Running average verfication time:  60.57 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  74
+Verification Time:  15.24 seconds
+Probability of Success Estimated:  98.77 %
+Probability of Success Actual:  92.45 %
+Running average relaxation gap:  9.12 %
+Running average verfication time:  59.96 sec
+Neural network passed verification: false positive!
+---------------------------
+Trial #:  75
+Verification Time:  12.11 seconds
+Probability of Success Estimated:  87.55 %
+Probability of Success Actual:  73.11 %
+Running average relaxation gap:  9.20 %
+Running average verfication time:  59.32 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  76
+Verification Time:  14.99 seconds
+Probability of Success Estimated:  50.37 %
+Probability of Success Actual:  52.78 %
+Running average relaxation gap:  9.11 %
+Running average verfication time:  58.73 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  77
+Verification Time:  11.74 seconds
+Probability of Success Estimated:  38.56 %
+Probability of Success Actual:  41.65 %
+Running average relaxation gap:  9.03 %
+Running average verfication time:  58.12 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  78
+Verification Time:  12.78 seconds
+Probability of Success Estimated:  91.34 %
+Probability of Success Actual:  88.64 %
+Running average relaxation gap:  8.95 %
+Running average verfication time:  57.54 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  79
+Verification Time:  14.46 seconds
+Probability of Success Estimated:  0.10 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.84 %
+Running average verfication time:  57.00 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  80
+Verification Time:  12.18 seconds
+Probability of Success Estimated:  5.91 %
+Probability of Success Actual:  10.75 %
+Running average relaxation gap:  8.79 %
+Running average verfication time:  56.44 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  81
+Verification Time:  13.92 seconds
+Probability of Success Estimated:  99.71 %
+Probability of Success Actual:  98.60 %
+Running average relaxation gap:  8.69 %
+Running average verfication time:  55.91 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  82
+Verification Time:  11.7 seconds
+Probability of Success Estimated:  3.19 %
+Probability of Success Actual:  0.00 %
+Running average relaxation gap:  8.62 %
+Running average verfication time:  55.37 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  83
+Verification Time:  13.31 seconds
+Probability of Success Estimated:  99.92 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.52 %
+Running average verfication time:  54.87 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  84
+Verification Time:  12.45 seconds
+Probability of Success Estimated:  62.42 %
+Probability of Success Actual:  68.05 %
+Running average relaxation gap:  8.49 %
+Running average verfication time:  54.36 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  85
+Verification Time:  13.92 seconds
+Probability of Success Estimated:  70.43 %
+Probability of Success Actual:  66.27 %
+Running average relaxation gap:  8.44 %
+Running average verfication time:  53.88 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  86
+Verification Time:  13.65 seconds
+Probability of Success Estimated:  99.64 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.34 %
+Running average verfication time:  53.42 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  87
+Verification Time:  12.04 seconds
+Probability of Success Estimated:  99.41 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.25 %
+Running average verfication time:  52.94 sec
+Neural network passed verification: correct result
+---------------------------
+Trial #:  88
+Verification Time:  14.61 seconds
+Probability of Success Estimated:  85.64 %
+Probability of Success Actual:  85.43 %
+Running average relaxation gap:  8.16 %
+Running average verfication time:  52.51 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  89
+Verification Time:  12.38 seconds
+Probability of Success Estimated:  94.50 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.13 %
+Running average verfication time:  52.06 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  90
+Verification Time:  13.4 seconds
+Probability of Success Estimated:  94.61 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  8.10 %
+Running average verfication time:  51.63 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  91
+Verification Time:  12.95 seconds
+Probability of Success Estimated:  4.84 %
+Probability of Success Actual:  4.24 %
+Running average relaxation gap:  8.02 %
+Running average verfication time:  51.20 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  92
+Verification Time:  12.46 seconds
+Probability of Success Estimated:  0.07 %
+Probability of Success Actual:  3.70 %
+Running average relaxation gap:  7.97 %
+Running average verfication time:  50.78 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  93
+Verification Time:  13.44 seconds
+Probability of Success Estimated:  95.92 %
+Probability of Success Actual:  84.97 %
+Running average relaxation gap:  8.00 %
+Running average verfication time:  50.38 sec
+Neural network passed verification: false positive!
+---------------------------
+Trial #:  94
+Verification Time:  12.86 seconds
+Probability of Success Estimated:  67.23 %
+Probability of Success Actual:  59.86 %
+Running average relaxation gap:  8.00 %
+Running average verfication time:  49.98 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  95
+Verification Time:  12.47 seconds
+Probability of Success Estimated:  52.13 %
+Probability of Success Actual:  51.79 %
+Running average relaxation gap:  7.92 %
+Running average verfication time:  49.58 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  96
+Verification Time:  12.46 seconds
+Probability of Success Estimated:  62.94 %
+Probability of Success Actual:  68.99 %
+Running average relaxation gap:  7.89 %
+Running average verfication time:  49.20 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  97
+Verification Time:  12.82 seconds
+Probability of Success Estimated:  61.18 %
+Probability of Success Actual:  63.10 %
+Running average relaxation gap:  7.83 %
+Running average verfication time:  48.82 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  98
+Verification Time:  12.31 seconds
+Probability of Success Estimated:  67.48 %
+Probability of Success Actual:  66.92 %
+Running average relaxation gap:  7.76 %
+Running average verfication time:  48.45 sec
+Neural network failed verification: correct result
+---------------------------
+Trial #:  99
+Verification Time:  12.4 seconds
+Probability of Success Estimated:  92.43 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  7.76 %
+Running average verfication time:  48.09 sec
+Neural network failed verification: false negative!
+---------------------------
+Trial #:  100
+Verification Time:  12.25 seconds
+Probability of Success Estimated:  99.87 %
+Probability of Success Actual:  100.00 %
+Running average relaxation gap:  7.68 %
+Running average verfication time:  47.73 sec
+Neural network passed verification: correct result
+------------------- SUMMARY -------------------
+21 networks passed,  79 networks failed
+5 false positives,  18 false negatives
+Average Relaxation Gap:  7.68 %
+Average Verification Time:  47.73 sec
