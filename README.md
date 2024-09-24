@@ -16,7 +16,7 @@ To install NN-Verification-Samples using pip3, follow these steps:
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/NN-Verification-Samples.git
+    git clone https://github.com/vigsiv/NN-Verification-Samples.git
     ```
 
 2. Navigate to the project directory:
