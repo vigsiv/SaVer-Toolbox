@@ -6,6 +6,7 @@ This package provides a collection of sampling-based tools which allow one to ve
 
 To use this package, you need the following dependencies installed:
 - NumPy
+- SciPy
 - Matplotlib
 
 ## Installation
