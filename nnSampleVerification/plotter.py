@@ -21,6 +21,10 @@ def plot2DNormLevelSet(center,zero_radius,samples):
     # Set the aspect ratio of the plot to 'equal'
     plt.axis('equal')
 
+    # Limit the x-axis and y-axis
+    plt.xlim(center[0] - zero_radius - 1, center[0] + 2*zero_radius + 1)
+    plt.ylim(center[1] - zero_radius - 1, center[1] + 2*zero_radius + 1)
+
     # Show the plot
     plt.show()
 
