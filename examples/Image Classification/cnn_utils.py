@@ -44,13 +44,21 @@ def generate_noisy_samples_from_image(image, n, noise_std=0.1,transform = None):
     return noisy_samples
 
 # prints image
-def img_show(img):
+def img_show(img,save_image = False,save_name = 'output_image.png'):
     if len(img.shape) == 4:
         simg = img.squeeze(0)  # Remove the batch dimension
     else:
         simg = img
-    plt.imshow(simg.permute(1, 2, 0).cpu().numpy(),cmap='gray')  # Use 'gray' colormap to display a grayscale image
+    
+    image_data = simg.permute(1, 2, 0).cpu().numpy()
+    if image_data.shape[-1] == 1:
+        image_data = image_data.squeeze(-1)
+    plt.imshow(image_data,cmap='gray')  # Use 'gray' colormap to display a grayscale image
+    plt.axis('off')
     plt.show()
+    if save_image:
+        plt.imsave(save_name, image_data, cmap='gray')
+        
 
 # returns logits associated with n noisy images given unnormalized image
 def logit_samples(image,model,transform,n,noise_std):
