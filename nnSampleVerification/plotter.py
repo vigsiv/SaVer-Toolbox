@@ -43,7 +43,7 @@ def histogramPlot(empiricalCDF,eval,zero_radius,prob):
 
     # Set plot labels
     plt.xlabel('Signed Distance Function')
-    plt.ylabel('Frequency')
+    plt.ylabel('CDF Value')
     plt.legend()
 
     # Show the plot
