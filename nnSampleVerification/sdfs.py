@@ -14,6 +14,7 @@ class norm:
     def eval(self, point, zero_radius):
         # Calculate the signed distance of a point from the set
         # Replace this with your actual signed distance function implementation
+        
 
         eval = np.zeros(point.shape[0])
 
