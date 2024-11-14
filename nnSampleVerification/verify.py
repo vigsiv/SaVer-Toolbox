@@ -16,6 +16,7 @@ class usingDKW:
         print(f"Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\\beta): 1-beta = {1 - self.beta}")
         _ = self.samplesRequired()
         print("Please add the specification by calling \"usingDKW.addSpecification()\" function.")
+        print("Then, add samples by calling \"usingDKW.addSamples()\" function.")
         print("-----------------------------------------------------------------")
 
     def empiricalCDF(self,eval):
@@ -35,11 +36,11 @@ class usingDKW:
             print(f"Specification satisfied with probability: {probabilityEval * 100}% +/- {self.epsilon* 100}% which is greater than {1 - self.Delta}")
         else:
             print(f"Specification NOT satisfied as probability is {probabilityEval * 100}% +/- {self.epsilon* 100}% which is less than {1 - self.Delta}")
-            print("Run \"usingDKW.modifySetScaling()\" to find the scaling factor that satisfies the specification at satisfaction probability. Rerun \"usingDKW.SpecificationSatisfied()\" to check if the specification is satisfied.")
+            print("Run \"usingDKW.modifySetScaling()\" to find the scaling factor that satisfies the specification at satisfaction probability.")
         print("-----------------------------------------------------------------")
 
     
-    def modifySetScaling(self,rootFindingTolerance=1e-6,rootFindingMaxIter=100):
+    def modifySetScaling(self,rootFindingTolerance=1e-6,rootFindingMaxIter=100, verbose=False):
         # Find the level set of the CDF that corresponds to the zero radius
         # This is a simple wrapper around the optimization function
 
@@ -56,19 +57,30 @@ class usingDKW:
                 setScaling = optimize.bisect(levelCDF, lb, ub, xtol=rootFindingTolerance)
                 print("-----------------------------------------------------------------")
                 print(f"DKW-based scaling factor is modified to {setScaling} from the previous value: {self.setScaling}")
+                print("Please rerun \"usingDKW.SpecificationSatisfied()\" to check if the specification is satisfied.")
                 self.setScaling = setScaling
+                print("-----------------------------------------------------------------")
                 break
             except:
                 attempts += 1
                 lb = bound - 100*attempts*10**np.floor(np.log10(abs(bound)))
                 ub = bound + 100*attempts*10**np.floor(np.log10(abs(bound)))
-                print(f"Root finding attempt {attempts} failed. Trying again with lower bound of {lb} and upper bound of {ub}.")
+                if verbose:
+                    print(f"Root finding attempt {attempts} failed. Trying again with lower bound of {lb} and upper bound of {ub}.")
 
         if attempts == rootFindingMaxIter:
             print("Root finding failed for finding set scaling that meets satisfaction probability not found for given parameters.")
 
     def addSpecification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
+        if hasattr(self,'signedDistanceFunction'):
+            print("-----------------------------------------------------------------")
+            print("Specification updated. Please add samples by calling 'usingDKW.addSamples()' function.")
+            print("----------------------------------------------------------------")
+        else: 
+            print("-----------------------------------------------------------------")
+            print("Specification aded. Please add samples by calling 'usingDKW.addSamples()' function.")
+            print("----------------------------------------------------------------")
 
     def addSamples(self,samples):
         if not hasattr(self, 'signedDistanceFunction'):
@@ -93,6 +105,7 @@ class usingScenario:
         print(f"Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\\beta): 1-beta = {1 - self.beta}, 1-Delta = {1 - self.Delta}")
         _ = self.samplesRequired()
         print("Please add the specification by calling \"usingScenario.addSpecification()\" function.")
+        print("Then, add samples by calling \"usingScenario.addSamples()\" function.")
         print("-----------------------------------------------------------------")
 
     def SpecificationSatisfied(self):
@@ -102,13 +115,13 @@ class usingScenario:
         setScaling = self.solveScenario()
         satisfied = setScaling <= 0
         print("-----------------------------------------------------------------")
-        if satisfied and setScaling <= 0:
+        if satisfied and setScaling < 0:
             print(f"Specification satisfied as scaling is {setScaling} which is less than 0")
         elif satisfied and setScaling == 0:
             print(f"Specification satisfied as scaling is {setScaling} which is equal to 0")
         else:
             print(f"Specification NOT satisfied as scaling is {setScaling} which is greater than 0")
-            print("Run \"usingScenario.modifySetScaling()\" to find the scaling factor that satisfies the specification at satisfaction probability. Rerun \"usingScenario.SpecificationSatisfied()\" to check if the specification is satisfied.")
+            print("Run \"usingScenario.modifySetScaling()\" to find the scaling factor that satisfies the specification at satisfaction probability.")
         print("-----------------------------------------------------------------")
 
     def modifySetScaling(self):
@@ -117,11 +130,20 @@ class usingScenario:
         setScaling = self.solveScenario()
         print("-----------------------------------------------------------------")
         print(f"Scenario-based scaling factor is modified to {setScaling} from the previous value: {self.setScaling}")
+        print("Please rerun \"usingScenario.SpecificationSatisfied()\" to check if the specification is satisfied.")
         self.setScaling = setScaling
         print("-----------------------------------------------------------------")
 
     def addSpecification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
+        if hasattr(self,'signedDistanceFunction'):
+            print("-----------------------------------------------------------------")
+            print("Specification updated. Please add samples by calling 'usingScenario.addSamples()' function.")
+            print("----------------------------------------------------------------")
+        else: 
+            print("-----------------------------------------------------------------")
+            print("Specification aded. Please add samples by calling 'usingScenario.addSamples()' function.")
+            print("----------------------------------------------------------------")
 
     def addSamples(self,samples):
         if not hasattr(self, 'signedDistanceFunction'):
