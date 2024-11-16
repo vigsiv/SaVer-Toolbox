@@ -71,7 +71,7 @@ class usingDKW:
         if attempts == rootFindingMaxIter:
             print("Root finding failed for finding set scaling that meets satisfaction probability not found for given parameters.")
 
-    def addSpecification(self,signedDistanceFunction):
+    def specification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
         if hasattr(self,'signedDistanceFunction'):
             print("-----------------------------------------------------------------")
@@ -82,7 +82,7 @@ class usingDKW:
             print("Specification aded. Please add samples by calling 'usingDKW.addSamples()' function.")
             print("----------------------------------------------------------------")
 
-    def addSamples(self,samples):
+    def samples(self,samples):
         if not hasattr(self, 'signedDistanceFunction'):
             raise ValueError(f"Specification (sdf) not added. Please add the specification by calling '{self.__class__.__name__}.addSpecification()' function.")
         self.samples = samples
@@ -134,7 +134,7 @@ class usingScenario:
         self.setScaling = setScaling
         print("-----------------------------------------------------------------")
 
-    def addSpecification(self,signedDistanceFunction):
+    def specification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
         if hasattr(self,'signedDistanceFunction'):
             print("-----------------------------------------------------------------")
@@ -145,7 +145,7 @@ class usingScenario:
             print("Specification aded. Please add samples by calling 'usingScenario.addSamples()' function.")
             print("----------------------------------------------------------------")
 
-    def addSamples(self,samples):
+    def samples(self,samples):
         if not hasattr(self, 'signedDistanceFunction'):
             raise ValueError(f"Specification (sdf) not added. Please add the specification by calling '{self.__class__.__name__}.addSpecification()' function.")
         self.samples = samples
