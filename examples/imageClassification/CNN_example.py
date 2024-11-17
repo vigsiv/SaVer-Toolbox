@@ -19,7 +19,7 @@ betaScenario = 0.001
 verifScenario = verify.usingScenario(betaScenario,Delta)
 
 # %%
-pretrained_model = "./examples/Image Classification/lenet_mnist_model.pth"
+pretrained_model = "./examples/imageClassification/lenet_mnist_model.pth"
 
 # Set random seed for reproducibility
 torch.manual_seed(42)
@@ -50,7 +50,7 @@ class cnnLeNet(nn.Module):
 
 # %%
 # MNIST dataset and transform
-mnist_dataset = datasets.MNIST(root='./examples/Image Classification/data', train=False, download=False, transform=transforms.Compose([
+mnist_dataset = datasets.MNIST(root='./examples/imageClassification/data', train=False, download=False, transform=transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,)),
             ]))
@@ -75,7 +75,7 @@ print("---------------------------------")
 mean = torch.tensor([0.1307])
 std = torch.tensor([0.3081])
 image = denorm(norm_image,mean=mean, std=std)
-img_show(image,save_image = True,save_name = './examples/Image Classification/original_7.png')
+img_show(image,save_image = True,save_name = './examples/imageClassification/original_7.png')
 
 # %%
 #define transformation to be applied as required by nn
@@ -85,8 +85,8 @@ sd = 0.5
 #generate noisy transformed images and corresponding nn output logits
 noisySamplesDKW,noisyLogitsDKW = logit_samples(image,model,trans,verifDKW.samplesRequired(),sd)
 noisySamplesScenario,noisyLogitsScenario = logit_samples(image,model,trans,verifScenario.samplesRequired(),sd)
-img_show(denorm(noisySamplesDKW[0],mean=mean, std=std),save_image = True,save_name = './examples/Image Classification/noisy7DKW.png')
-img_show(denorm(noisySamplesScenario[0],mean=mean, std=std),save_image = True,save_name = './examples/Image Classification/noisy7Scenario.png')
+img_show(denorm(noisySamplesDKW[0],mean=mean, std=std),save_image = True,save_name = './examples/imageClassification/noisy7DKW.png')
+img_show(denorm(noisySamplesScenario[0],mean=mean, std=std),save_image = True,save_name = './examples/imageClassification/noisy7Scenario.png')
 
 # %%
 #Defining polytope for given class index
