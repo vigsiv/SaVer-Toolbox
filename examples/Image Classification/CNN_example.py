@@ -75,7 +75,7 @@ print("---------------------------------")
 mean = torch.tensor([0.1307])
 std = torch.tensor([0.3081])
 image = denorm(norm_image,mean=mean, std=std)
-img_show(image,save_image = True,save_name = 'original_7.png')
+img_show(image,save_image = True,save_name = './examples/Image Classification/original_7.png')
 
 # %%
 #define transformation to be applied as required by nn
@@ -85,8 +85,8 @@ sd = 0.5
 #generate noisy transformed images and corresponding nn output logits
 noisySamplesDKW,noisyLogitsDKW = logit_samples(image,model,trans,verifDKW.samplesRequired(),sd)
 noisySamplesScenario,noisyLogitsScenario = logit_samples(image,model,trans,verifScenario.samplesRequired(),sd)
-img_show(denorm(noisySamplesDKW[0],mean=mean, std=std),save_image = True,save_name = 'noisy7DKW.png')
-img_show(denorm(noisySamplesScenario[0],mean=mean, std=std),save_image = True,save_name = 'noisy7Scenario.png')
+img_show(denorm(noisySamplesDKW[0],mean=mean, std=std),save_image = True,save_name = './examples/Image Classification/noisy7DKW.png')
+img_show(denorm(noisySamplesScenario[0],mean=mean, std=std),save_image = True,save_name = './examples/Image Classification/noisy7Scenario.png')
 
 # %%
 #Defining polytope for given class index
