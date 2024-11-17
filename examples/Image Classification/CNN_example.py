@@ -50,7 +50,7 @@ class cnnLeNet(nn.Module):
 
 # %%
 # MNIST dataset and transform
-mnist_dataset = datasets.MNIST(root='data', train=False, download=True, transform=transforms.Compose([
+mnist_dataset = datasets.MNIST(root='./examples/Image Classification/data', train=False, download=False, transform=transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,)),
             ]))
