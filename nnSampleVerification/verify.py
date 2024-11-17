@@ -33,14 +33,14 @@ class usingDKW:
         satisfied = probabilityEval + self.epsilon >= 1 - self.Delta
         print("-----------------------------------------------------------------")
         if satisfied:
-            print(f"Specification satisfied via DKW approach with probability: {probabilityEval * 100}% +/- {self.epsilon* 100}% which is greater than {1 - self.Delta}")
+            print(f"Specification satisfied via DKW approach with probability: {probabilityEval * 100}% +/- {self.epsilon* 100}% which is near {(1 - self.Delta)*100}% with +/- {self.epsilon* 100}%")
         else:
-            print(f"Specification NOT satisfied via DKW approach as probability is {probabilityEval * 100}% +/- {self.epsilon* 100}% which is less than {1 - self.Delta}")
+            print(f"Specification NOT satisfied via DKW approach as probability is {probabilityEval * 100}% +/- {self.epsilon* 100}% which is less than {(1 - self.Delta) *100}%")
             print("Run \"usingDKW.modifySet()\" to find the set modification that satisfies the specification at satisfaction probability.")
         print("-----------------------------------------------------------------")
 
     
-    def modifySet(self,rootFindingTolerance=1e-6,rootFindingMaxIter=100, verbose=False):
+    def modifySet(self,rootFindingTolerance=1e-12,rootFindingMaxIter=100, verbose=False):
         # Find the level set of the CDF that corresponds to the zero radius
         # This is a simple wrapper around the optimization function
 
@@ -131,7 +131,7 @@ class usingScenario:
         # This is a simple wrapper around the optimization function
         theta = self.solveScenario()
         print("-----------------------------------------------------------------")
-        print(f"Scenario-based scaling factor is modified to {theta} from the previous value: {self.theta}")
+        print(f"Scenario-based theta is modified to {theta} from the previous value: {self.theta}")
         print("Please rerun \"usingScenario.probability()\" to check if the specification is satisfied.")
         self.theta = theta
         print("-----------------------------------------------------------------")

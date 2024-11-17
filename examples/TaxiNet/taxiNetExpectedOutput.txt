@@ -1,0 +1,91 @@
+##### Run #1 #####
+
+-----------------------------------------------------------------
+Error between true and empirical CDF (i.e. \sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon): epsilon = 0.1
+Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\beta): 1-beta = 0.999
+Number of samples needed from simulator/sampler for DKW: 381
+Please add the specification by calling "usingDKW.addSpecification()" function.
+Then, add samples by calling "usingDKW.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\beta): 1-beta = 0.999, 1-Delta = 0.9
+Number of samples needed from simulator/sampler for Scenario: 126
+Please add the specification by calling "usingScenario.addSpecification()" function.
+Then, add samples by calling "usingScenario.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
+----------------------------------------------------------------
+Number of samples needed from simulator/sampler for DKW: 381
+Number of samples needed from simulator/sampler for Scenario: 126
+-----------------------------------------------------------------
+Specification NOT satisfied via DKW approach as probability is 15.485564304461944% +/- 10.0% which is less than 90.0%
+Run "usingDKW.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via scenario approach as set signed distance function is expanded to 1.2520071507626938 which is greater than 0
+Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+DKW-based theta is modified to 0.6321201546724637 from the previous value: 0.0
+Please rerun "usingDKW.probability()" to check if the specification is satisfied.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Scenario-based theta is modified to 1.2520071507626938 from the previous value: 0.0
+Please rerun "usingScenario.probability()" to check if the specification is satisfied.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification satisfied via DKW approach with probability: 90.02624671916011% +/- 10.0% which is near 90.0% with +/- 10.0%
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification satisfied via scenario approach as set is 0.0 which is equal to 0
+-----------------------------------------------------------------
+
+##### Run #2 ######
+
+-----------------------------------------------------------------
+Error between true and empirical CDF (i.e. \sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon): epsilon = 0.1
+Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\beta): 1-beta = 0.999
+Number of samples needed from simulator/sampler for DKW: 381
+Please add the specification by calling "usingDKW.addSpecification()" function.
+Then, add samples by calling "usingDKW.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\beta): 1-beta = 0.999, 1-Delta = 0.9
+Number of samples needed from simulator/sampler for Scenario: 126
+Please add the specification by calling "usingScenario.addSpecification()" function.
+Then, add samples by calling "usingScenario.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
+----------------------------------------------------------------
+Number of samples needed from simulator/sampler for DKW: 381
+Number of samples needed from simulator/sampler for Scenario: 126
+-----------------------------------------------------------------
+Specification NOT satisfied via DKW approach as probability is 15.485564304461944% +/- 10.0% which is less than 90.0%
+Run "usingDKW.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via scenario approach as set signed distance function is expanded to 1.2520071507626938 which is greater than 0
+Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+DKW-based theta is modified to 0.6321201546724637 from the previous value: 0.0
+Please rerun "usingDKW.probability()" to check if the specification is satisfied.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Scenario-based theta is modified to 1.2520071507626938 from the previous value: 0.0
+Please rerun "usingScenario.probability()" to check if the specification is satisfied.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification satisfied via DKW approach with probability: 90.02624671916011% +/- 10.0% which is near 90.0% with +/- 10.0%
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification satisfied via scenario approach as set is 0.0 which is equal to 0
+-----------------------------------------------------------------

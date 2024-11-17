@@ -1,0 +1,67 @@
+##### Run #1 #####
+
+-----------------------------------------------------------------
+Error between true and empirical CDF (i.e. \sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon): epsilon = 0.01
+Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\beta): 1-beta = 0.999
+Number of samples needed from simulator/sampler for DKW: 38005
+Please add the specification by calling "usingDKW.addSpecification()" function.
+Then, add samples by calling "usingDKW.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\beta): 1-beta = 0.999, 1-Delta = 0.99
+Number of samples needed from simulator/sampler for Scenario: 1251
+Please add the specification by calling "usingScenario.addSpecification()" function.
+Then, add samples by calling "usingScenario.samples()" function.
+-----------------------------------------------------------------
+Original digit: 7
+---------------------------------
+Number of samples needed from simulator/sampler for DKW: 38005
+Number of samples needed from simulator/sampler for Scenario: 1251
+-----------------------------------------------------------------
+Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via DKW approach as probability is 31.9773713985002% +/- 1.0% which is less than 99.0%
+Run "usingDKW.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via scenario approach as set signed distance function is expanded to 7.768492563396678 which is greater than 0
+Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+
+
+##### Run #2 #####
+
+-----------------------------------------------------------------
+Error between true and empirical CDF (i.e. \sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon): epsilon = 0.01
+Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\beta): 1-beta = 0.999
+Number of samples needed from simulator/sampler for DKW: 38005
+Please add the specification by calling "usingDKW.addSpecification()" function.
+Then, add samples by calling "usingDKW.samples()" function.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\beta): 1-beta = 0.999, 1-Delta = 0.99
+Number of samples needed from simulator/sampler for Scenario: 1251
+Please add the specification by calling "usingScenario.addSpecification()" function.
+Then, add samples by calling "usingScenario.samples()" function.
+-----------------------------------------------------------------
+Original digit: 7
+---------------------------------
+Number of samples needed from simulator/sampler for DKW: 38005
+Number of samples needed from simulator/sampler for Scenario: 1251
+-----------------------------------------------------------------
+Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
+----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via DKW approach as probability is 31.9773713985002% +/- 1.0% which is less than 99.0%
+Run "usingDKW.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Specification NOT satisfied via scenario approach as set signed distance function is expanded to 7.768492563396678 which is greater than 0
+Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+-----------------------------------------------------------------
