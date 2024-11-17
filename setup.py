@@ -8,5 +8,8 @@ setup(
         'matplotlib',   # For plotting
         'numpy',        # For numerical calculations
         'torch',        # PyTorch
+        'cvxpy',        # For optimization
+        'torchvision',  # For image processing
+        'h5py',         # For reading and writing HDF5 files
     ],
 )
