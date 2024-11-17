@@ -71,6 +71,8 @@ class usingDKW:
         if attempts == rootFindingMaxIter:
             print("Root finding failed for finding set scaling that meets satisfaction probability not found for given parameters.")
 
+        return setScaling
+
     def specification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
         if hasattr(self,'signedDistanceFunction'):
@@ -133,6 +135,7 @@ class usingScenario:
         print("Please rerun \"usingScenario.SpecificationSatisfied()\" to check if the specification is satisfied.")
         self.setScaling = setScaling
         print("-----------------------------------------------------------------")
+        return setScaling
 
     def specification(self,signedDistanceFunction):
         self.signedDistanceFunction = signedDistanceFunction
