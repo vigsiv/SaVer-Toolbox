@@ -1,4 +1,4 @@
-# SaVer: A Toolbox for __Sa__mpling-Based, Probabilistic __Ver__ification of Neural Networks
+# SaVer: A Toolbox for _Sa_ mpling-Based, Probabilistic _Ver_ ification of Neural Networks
 
 This package provides a collection of sampling-based tools which allow one to verify neural networks just using samples. 
 
