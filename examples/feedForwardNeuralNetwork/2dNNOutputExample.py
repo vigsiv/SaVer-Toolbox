@@ -130,8 +130,3 @@ plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 plt.show()
 
 
-
-# evalPts = np.linspace(500,3000,100)
-# plotter.histogramPlot(verifDKW.empiricalCDF,evalPts,setReductionDKW,verifDKW.empiricalCDF(setReductionDKW))
-
-
