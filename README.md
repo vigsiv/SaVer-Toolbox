@@ -8,6 +8,10 @@ To use this package, you need the following dependencies installed:
 - NumPy
 - SciPy
 - Matplotlib
+- torch
+- cvxpy
+- torchvision
+- h5py
 
 ## Installation
 
