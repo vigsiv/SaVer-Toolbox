@@ -60,7 +60,6 @@ verifScenario.probability()
 # %%
 plt.rcParams.update({'font.size': 9, 'font.family': 'serif'})
 plt.figure(figsize=(3.3, 3.3))
-plt.rcParams.update({'figure.dpi': 600})
 
 # Add horizontal lines at 10 and -10
 plt.axhline(y=0, color='k', linestyle='--', label='Centerline of Runway')
@@ -87,7 +86,9 @@ plt.xlabel('Position of Aircraft Down the Runway (m)')
 plt.ylabel('Lateral Aircraft Position (m)')
 plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
-# Show the plot
+# Save and show the plot
+print('Saving plot...')
+plt.savefig('./examples/TaxiNet/Figure8.png', bbox_inches='tight',format='png', dpi=600)
 plt.show()
 
 

@@ -18,3 +18,5 @@ WORKDIR /SaVer_Toolbox
 COPY ./ ./
 
 RUN pip3 install -e .
+
+WORKDIR /

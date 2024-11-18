@@ -23,18 +23,17 @@ Specification updated in DKW approach. Please add samples by calling 'usingDKW.s
 Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
 ----------------------------------------------------------------
 -----------------------------------------------------------------
-Specification satisfied via DKW approach with probability: 99.99344814774663% +/- 0.1% which is near 99.9% with +/- 0.1%
+Specification satisfied via DKW approach with probability: 99.99410596423793% +/- 0.1% which is near 99.9% with +/- 0.1%
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-Specification NOT satisfied via scenario approach as set signed distance function is expanded to 6039.4435955860645 which is greater than 0
-Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
+Specification satisfied via scenario approach as set signed distance function is reduced to -4138.2617627440795 which is less than 0
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-DKW-based theta is modified to -18698.601863301148 from the previous value: 0.0
+DKW-based theta is modified to -18906.523129216712 from the previous value: 0.0
 Please rerun "usingDKW.probability()" to check if the specification is satisfied.
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-Scenario-based theta is modified to 6039.4435955860645 from the previous value: 0.0
+Scenario-based theta is modified to -4138.2617627440795 from the previous value: 0.0
 Please rerun "usingScenario.probability()" to check if the specification is satisfied.
 -----------------------------------------------------------------
 -----------------------------------------------------------------
@@ -43,12 +42,12 @@ Specification satisfied via DKW approach with probability: 99.8999855806625% +/-
 -----------------------------------------------------------------
 Specification satisfied via scenario approach as set is 0.0 which is equal to 0
 -----------------------------------------------------------------
+Saving plot...
 
 
 ##### Run #2 #####
 
-
------------------------------------------------------------------
+-----------------------------------------------------------------                                                                                                                                                                                                                                                            
 Error between true and empirical CDF (i.e. \sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon): epsilon = 0.001
 Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\beta): 1-beta = 0.999
 Number of samples needed from simulator/sampler for DKW: 3800452
@@ -70,17 +69,17 @@ Specification updated in DKW approach. Please add samples by calling 'usingDKW.s
 Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.
 ----------------------------------------------------------------
 -----------------------------------------------------------------
-Specification satisfied via DKW approach with probability: 99.99326395912908% +/- 0.1% which is near 99.9% with +/- 0.1%
+Specification satisfied via DKW approach with probability: 99.99518478328368% +/- 0.1% which is near 99.9% with +/- 0.1%
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-Specification satisfied via scenario approach as set signed distance function is reduced to -13301.134010130283 which is less than 0
+Specification satisfied via scenario approach as set signed distance function is reduced to -11542.948601095331 which is less than 0
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-DKW-based theta is modified to -18621.87401689321 from the previous value: 0.0
+DKW-based theta is modified to -19061.72381857591 from the previous value: 0.0
 Please rerun "usingDKW.probability()" to check if the specification is satisfied.
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-Scenario-based theta is modified to -13301.134010130283 from the previous value: 0.0
+Scenario-based theta is modified to -11542.948601095331 from the previous value: 0.0
 Please rerun "usingScenario.probability()" to check if the specification is satisfied.
 -----------------------------------------------------------------
 -----------------------------------------------------------------
@@ -89,3 +88,4 @@ Specification satisfied via DKW approach with probability: 99.90001189332216% +/
 -----------------------------------------------------------------
 Specification satisfied via scenario approach as set is 0.0 which is equal to 0
 -----------------------------------------------------------------
+Saving plot...

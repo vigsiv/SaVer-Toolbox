@@ -98,7 +98,6 @@ verifScenario.probability()
 # %%
 plt.rcParams.update({'font.size': 9, 'font.family': 'serif'})
 plt.figure(figsize=(3.3, 3.3))
-plt.rcParams.update({'figure.dpi': 600})
 
 # Plot the samples
 plt.plot(samplesScenario[:,0],samplesScenario[:,1], 'o', label='Neural Network Output')
@@ -126,7 +125,10 @@ plt.xlabel('Output 1')
 plt.ylabel('Output 2')
 plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
-# Show the plot
+# Save and show the plot
+print('Saving plot...')
+plt.savefig('./examples/feedForwardNeuralNetwork/Figure5.png', bbox_inches='tight',format='png', dpi=600)
 plt.show()
+
 
 
