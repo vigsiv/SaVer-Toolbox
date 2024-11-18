@@ -11,5 +11,7 @@ setup(
         'cvxpy>=1.1.15',       # For optimization
         'torchvision>=0.10.0', # For image processing
         'h5py>=3.3.0',         # For reading and writing HDF5 files
+        'scipy>=1.7.1',        # For optimization
+        requires-python = ">=3.9"
     ],
 )
