@@ -6,7 +6,7 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 import numpy as np
 import matplotlib.pyplot as plt
-from nnSampleVerification import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import plotter, signedDistanceFunction, verify
 from cnn_utils import denorm,generate_noisy_samples_from_image,img_show,logit_samples
 from verif_utils import define_classification_polytope_w_b
 
@@ -59,7 +59,7 @@ mnist_dataset = datasets.MNIST(root='./examples/imageClassification/data', train
 # Initialize the network
 model = cnnLeNet()
 # Load the pretrained model
-model.load_state_dict(torch.load(pretrained_model, weights_only=True))
+model.load_state_dict(torch.load(pretrained_model, weights_only=True,map_location=torch.device('cpu')))
 # Set the model in evaluation mode. In this case this is for the Dropout layers: 
 model.eval()
 

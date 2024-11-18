@@ -1,9 +1,8 @@
 # %%
-import requests, os
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
-from nnSampleVerification import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import plotter, signedDistanceFunction, verify
 
 # %% [markdown]
 # 

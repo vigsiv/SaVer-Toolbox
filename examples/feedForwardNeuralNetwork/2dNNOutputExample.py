@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
-from nnSampleVerification import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import plotter, signedDistanceFunction, verify
 
 # %%
 betaDKW = 0.001
