@@ -6,7 +6,9 @@ This package provides a collection of sampling-based tools which allow one to ve
 
 Please ensure you have docker installed on your computer following the instructions [here](https://docs.docker.com/get-docker/):
 
-1. Download the package to your computer either by downloading the zip file from **Releases** on the right: 
+1. Download the package to your computer either by downloading the zip file from:
+    1.  **Releases** on the right (if using GitHub). 
+    2. **Download Repository** on top right (if using Anonymous GitHub) 
 
 2. Once downloaded open your terminal or command line interface and move to directory the files reside:
     ```
