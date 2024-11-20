@@ -14,7 +14,6 @@ Then, add samples by calling "usingScenario.samples()" function.
 Original digit: 7
 ---------------------------------
 Number of samples needed from simulator/sampler for DKW: 38005
-[W1120 10:22:18.611812385 NNPACK.cpp:61] Could not initialize NNPACK! Reason: Unsupported hardware.
 Number of samples needed from simulator/sampler for Scenario: 1251
 -----------------------------------------------------------------
 Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.
@@ -27,6 +26,6 @@ Specification NOT satisfied via DKW approach as probability is 31.9773713985002%
 Run "usingDKW.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
 -----------------------------------------------------------------
 -----------------------------------------------------------------
-Specification NOT satisfied via scenario approach as set signed distance function is expanded to 7.768493816045787 which is greater than 0
+Specification NOT satisfied via scenario approach as set signed distance function is expanded to 7.76849194683615 which is greater than 0
 Run "usingScenario.modifySet()" to find the set modification that satisfies the specification at satisfaction probability.
 -----------------------------------------------------------------
