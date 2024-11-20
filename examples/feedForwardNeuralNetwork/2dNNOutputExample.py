@@ -22,7 +22,7 @@ verifScenario = verify.usingScenario(betaScenario,Delta)
 num_dimensions = 4
 
 # Seed the random number generator for reproducibility
-np.random.seed(43)
+np.random.seed(22)
 
 # Generate samples from a standard Cauchy distribution
 samplesDKW = np.random.standard_cauchy((verifDKW.samplesRequired(), num_dimensions))
