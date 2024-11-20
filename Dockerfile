@@ -4,6 +4,7 @@ FROM ubuntu:22.04
 # Set the container name
 LABEL name="SaVer_Toolbox"
 
+# Set the environment variables for some packages: 
 ENV TZ=America/New_York \
     DEBIAN_FRONTEND=noninteractive
 
@@ -17,6 +18,7 @@ WORKDIR /SaVer_Toolbox
 # Copy the current directory contents into the container at /app
 COPY ./ ./
 
-RUN pip3 install -e .
+# Install the SaVer_Toolbox: 
+RUN pip3 install .
 
 WORKDIR /

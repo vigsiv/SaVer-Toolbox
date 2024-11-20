@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
-from SaVer_Toolbox import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import signedDistanceFunction, verify
 
 # Set the seed for reproducibility
 torch.manual_seed(128)
@@ -89,7 +89,7 @@ verifDKW.probability()
 verifScenario.probability()
 
 # %%
-# Modify the zero level set:
+# Modify the set:
 setReductionDKW = verifDKW.modifySet()
 setReductionScenario = verifScenario.modifySet()
 

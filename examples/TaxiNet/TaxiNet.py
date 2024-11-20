@@ -2,7 +2,7 @@
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
-from SaVer_Toolbox import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import signedDistanceFunction, verify
 
 # %% [markdown]
 # 
@@ -48,7 +48,7 @@ verifDKW.probability()
 verifScenario.probability()
 
 # %%
-# Modify the zero level set:
+# Modify the set:
 setEnlargementDKW = verifDKW.modifySet()
 setEnlargementScenario = verifScenario.modifySet()
 

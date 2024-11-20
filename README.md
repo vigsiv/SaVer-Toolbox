@@ -1,74 +1,101 @@
 # SAVER: A toolbox for SAmpling-based, probabilistic VERification of neural networks
 
-This package provides a collection of sampling-based tools which allow one to verify neural networks just using samples. 
+This package provides a collection of sampling-based approaches which allow one to verify neural networks just using samples. 
 
-## Running the Package (using Docker): 
+## Installation: 
 
-Please ensure you have docker installed on your computer following the instructions [here](https://docs.docker.com/get-docker/).
+Please follow the installation guide [here](REP.pdf) for system requirements, installation, and running examples in the paper.
 
-1. Download the package to your computer either by downloading the zip file from:
-    -  **Releases** on the right (if using GitHub). 
-    - **Download Repository** on top right (if using Anonymous GitHub) 
+## Elements in Toolbox:
 
-2. Once downloaded, unzip the file. 
-3. Open your terminal or command line interface and move to folder where the toolbox is:
+### Verification Methods:
+- **verify.DKW**: Employs the Dvoretzky-Kiefer-Wolfowitz (DKW) inequality to provide probabilistic guarantees on the verification of neural networks via cumulative distribution functions (CDFs).
+    - To initialize the DKW approach, we need to provide the following arguments: 
+        1. beta (float): The confidence level parameter.
+        2. epsilon (float): The error tolerance between the true and empirical CDF.
+        3. Delta (float, optional): A parameter with a default value of 0.1.
+- **verify.Scenario**: Employs the Scenario approach to provide probabilistic guarantees on the verification of neural networks via convex optimization. 
+    - To initialize the Scenario approach, we need to provide the following arguments: 
+        1. beta (float): The confidence level parameter.
+        3. Delta (float, optional): A parameter with a default value of 0.1.
+
+### Set Representations via Signed Distance Functions:
+- **signedDistanceFunction.norm**: Implements the norm-ball as a signed distance functions.
+    - To initialize the norm-ball, we need to provide the following arguments: 
+        1. center (np.ndarray): The center of the norm ball.
+        2. fixed_zero_radius (float): The fixed radius where the SDF is zero.
+        3. norm (int, optional): The norm to be used (default is 2, which corresponds to the 2 norm).
+- **signedDistanceFunction.polytope**: Implements the polytope as a signed distance functions.
+    - To initialize the polytope, we need to provide the following arguments: 
+        1. W (numpy.ndarray): The A matrix.
+        2. B (numpy.ndarray): The b vector.
+
+
+## Functions in Toolbox Used for Verification: 
+
+Once we intialize a verification method, e.g. "verificationMethod," we can use the following functions: 
+- **verificationMethod.samplesRequired()**: Provides the number of samples required by the verification method.
+- **verificationMethod.specification()**: Add the specification to the verification method.
+
+- **verificationMethod.probability()**: Computes the probability of the verification method.
+- **verificationMethod.modifySet()**: Modifies the set specification to satisfy the probability of satisfaction, 1-Delta.
+
+## Using the Toolbox for Your Use Case (Code Reuse):
+
+As suggested in the HSCC 2025 repeatability evaluation page [here](https://hscc.acm.org/2025/repeatability-evaluation/), one can adapt this toolbox to their verification task by using the following template:
+
+```python
+###################
+## example.py
+###################
+import numpy as np
+from SaVer_Toolbox import signedDistanceFunction, verify
+
+# Intialize the sampling methods with user defined error, violation, and confidence: 
+betaDKW = 0.001
+epsilonDKW = 0.001
+Delta = 1-0.999
+verifDKW = verify.usingDKW(betaDKW,epsilonDKW,Delta)
+betaScenario = 0.001
+verifScenario = verify.usingScenario(betaScenario,Delta)
+
+# Call your sampler or simulator with provided `samplesRequired()' function: 
+
+samplesDKW = your_sampler(verifDKW.samplesRequired())
+samplesScenario = your_sampler(verifScenario.samplesRequired())
+
+# Add samples to the verifier: 
+
+verifDKW.samples(samplesDKW)
+verifScenario.samples(samplesScenario)
+
+# Check if the samples satisfy the specification: 
+
+verifDKW.probability()
+verifScenario.probability()
+
+# Modify the set specification:
+setReductionDKW = verifDKW.modifySet()
+setReductionScenario = verifScenario.modifySet()
+
+# Check again the samples satisfy the specification now it is modified: 
+verifDKW.probability()
+verifScenario.probability()
+```
+
+You can run this directly in the directory via the following steps after loading/building the Docker image following the installation guide [here](REP.pdf):
+
+1. Open terminal or command line interface. Move to the folder that contains your Python file:
+    ```bash
+    cd folder_where_example_python_file_is
     ```
-    cd folder_where_SaVer_Toolbox_is/SaVer-Toolbox
+2. Run the following command to run in the Docker image:
+
+    macOS or Linux:
+    ```bash
+    docker run --rm -it -v ./:/current_run saver-toolbox sh -c "cd /current_run && python3 ./example.py"
     ```
-3. Run the following Docker command to build or load the image using the Dockerfile for your system: 
-    > **Note:** If you are using Linux, you may need to run the Docker command with `sudo docker` rather than just `docker`.
-    
-    **Load (Reccomended for Intel/AMD CPUs on Windows/macOS/Linux)**: 
-
-    Run the following command: 
+    Windows:
+    ```bash
+    docker run --rm -it -v .\:/current_run saver-toolbox sh -c "cd /current_run && python3 ./example.py"
     ```
-    docker load -i saver_toolbox.tar
-    ```
-    **Build from Dockerfile (Reccomended for Apple Silicon and ARM CPUs)**:
-    ```
-    docker build -t saver-toolbox .
-    ``` 
-4. For each example in the paper, run the following commands:
-    
-    - **Feedforward Neural Network with ReLU Activations:**
-        
-        macOS or Linux: 
-        ```
-        docker run --rm -it -v ./:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/feedForwardNeuralNetwork/2dNNOutputExample.py"
-        ```
-        Windows: 
-        ```
-        docker run --rm -it -v .\:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/feedForwardNeuralNetwork/2dNNOutputExample.py"
-        ```
-        - You can compare the command line output with the file under (since the approach is sample-based there will be slight variation): `folder_where_SaVer_Toolbox_is/SaVer-Toolbox/examples/feedForwardNeuralNetwork/ffNNExpectedOutput.txt` where two runs of the example are printed. 
-        - Figure 5 will be produced under: `folder_where_SaVer_Toolbox_is/SaVer-Toolbox/examples/feedForwardNeuralNetwork/Figure5.png`
-    - **Image Classification:**
-
-        macOS or Linux:
-        ```
-        docker run --rm -it -v ./:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/imageClassification/CNN_example.py"
-        ```
-        Windows:
-        ```
-        docker run --rm -it -v .\:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/imageClassification/CNN_example.py"
-        ```
-        - You can compare the command line output with the file under (since the approach is sample-based there will be slight variation): `folder_where_SaVer_Toolbox_is/SaVer-Toolbox/examples/imageClassification/imageClassificationExpectedOutput.txt`
-    - **TaxiNet:** 
-
-        macOS or Linux: 
-        ```
-        docker run --rm -it -v ./:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/TaxiNet/TaxiNet.py"
-        ```
-        Windows:
-        ```
-        docker run --rm -it -v .\:/current_run saver-toolbox sh -c "cd /current_run && python3 ./examples/TaxiNet/TaxiNet.py"
-        ```
-        - You can compare the command line output with the file under (since the approach is sample-based there will be slight variation): `folder_where_SaVer_Toolbox_is/SaVer-Toolbox/examples/TaxiNet/taxiNetExpectedOutput.txt` where two runs of the example are printed. 
-        - Figure 8 will be produced under: `folder_where_SaVer_Toolbox_is/SaVer-Toolbox/examples/TaxiNet/Figure8.png`
-
-
-## Using your toolbox to your usecase: 
-
-WIP
-
-## 

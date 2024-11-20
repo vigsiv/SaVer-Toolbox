@@ -3,19 +3,42 @@ import cvxpy as cp
 
 class norm:
     def __init__(self,center, fixed_zero_radius,norm=2):
+        """
+        Initializes the Signed Distance Function (SDF) for a norm ball.
+        Parameters:
+        center (np.ndarray): The center of the norm ball.
+        fixed_zero_radius (float): The fixed radius where the SDF is zero.
+        norm (int, optional): The norm to be used (default is 2, which corresponds to the 2 norm).
+        Attributes:
+        center (np.ndarray): The center of the norm ball.
+        norm (int): The norm to be used.
+        fixed_zero_radius (float): The fixed radius where the SDF is zero.
+        """
         
         self.center = center
         self.norm = norm
         self.fixed_zero_radius = fixed_zero_radius
 
-    def reviseCenter(self,center):
+    def reviseCenter(self, center):
+        """
+        Update the center attribute of the norm.
+        Parameters:
+        center (np.ndarray): The new center coordinates to be assigned to the object.
+        """
+
         self.center = center
 
     def eval(self, point, zero_radius):
-        # Calculate the signed distance of a point from the set
-        # Replace this with your actual signed distance function implementation
+        """
+        Evaluate the signed distance function for a norm ball.
+        Parameters:
+        point (np.ndarray): The point(s) at which to evaluate the signed distance function. 
+                            Should be an array of shape (n_points, n_dimensions).
+        zero_radius (float): The radius to subtract from the computed distance.
+        Returns:
+        np.ndarray: The evaluated signed distance for each point.
+        """
         
-
         eval = np.zeros(point.shape[0])
 
         eval = np.linalg.vector_norm(point-self.center,axis=1,ord=self.norm) - self.fixed_zero_radius - zero_radius
@@ -25,10 +48,23 @@ class norm:
 
 class polytope: 
     def __init__(self,W,B):
+        """
+        Initializes the polytope signed distance function.
+        Parameters:
+            W (numpy.ndarray): The A matrix.
+            B (numpy.ndarray): The b vector.
+        """
+
         self.W = W
         self.B = B
 
     def reviseCenter(self,W,B):
+        """
+        Update the weight matrix and bias vector of the polytope.
+        Parameters:
+            W (numpy.ndarray): The A matrix.
+            B (numpy.ndarray): The b vector.
+        """
         self.W = W
         self.B = B
 
@@ -42,9 +78,12 @@ def generate_A_b(W,B):
     Generate the matrix A and vector b from the list of halfspaces defined by
     w_i^T x + b_i >= 0 for each halfspace.
     
-    :param halfspaces: A list of tuples, where each tuple is (w, b), 
-                       with w as the normal vector and b as the scalar term.
-    :return: A (matrix) and b (vector) for the polytope defined by halfspaces.
+    Parameters:
+        W (numpy.ndarray): Rows of w_i^T.
+        B (numpy.ndarray): array of b_i.
+    Returns: 
+    A (np.ndarray): A matrix for the polytope defined by halfspaces.
+    b (np.ndarray): b vector for the polytope defined by halfspaces.
     """
     # Initialize lists to store A and b
     A = []
@@ -82,9 +121,10 @@ def signed_distance_function(s, w_list, b_list):
     
     # Check if the point is inside the intersection (all distances are non-negative)
     if all(d >= 0 for d in distances):
-        # Inside: Return the minimum distance
+        # Inside: Return the minimum distance:
         return -1*min(distances)
     else:
+        # Outside: Return the minimum distance via cvxpy:
         A,b =  generate_A_b(w_list,b_list)
         x = cp.Variable(A.shape[1])
         x0 = np.array(s)

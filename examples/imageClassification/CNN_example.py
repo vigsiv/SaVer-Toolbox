@@ -6,7 +6,7 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 import numpy as np
 import matplotlib.pyplot as plt
-from SaVer_Toolbox import plotter, signedDistanceFunction, verify
+from SaVer_Toolbox import signedDistanceFunction, verify
 from cnn_utils import denorm,generate_noisy_samples_from_image,img_show,logit_samples
 from verif_utils import define_classification_polytope_w_b
 
