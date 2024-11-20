@@ -170,3 +170,4 @@ cython_debug/
 # Compressed files: 
 *.zip
 *.tar
+*.tar.gz
