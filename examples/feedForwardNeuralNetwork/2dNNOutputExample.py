@@ -5,6 +5,9 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from SaVer_Toolbox import plotter, signedDistanceFunction, verify
 
+# Set the seed for reproducibility
+torch.manual_seed(128)
+
 # %%
 betaDKW = 0.001
 epsilonDKW = 0.001
@@ -19,7 +22,7 @@ verifScenario = verify.usingScenario(betaScenario,Delta)
 num_dimensions = 4
 
 # Seed the random number generator for reproducibility
-np.random.seed(128)
+np.random.seed(43)
 
 # Generate samples from a standard Cauchy distribution
 samplesDKW = np.random.standard_cauchy((verifDKW.samplesRequired(), num_dimensions))

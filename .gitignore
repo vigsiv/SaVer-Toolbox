@@ -162,8 +162,11 @@ cython_debug/
 #.idea/
 
 #MACOS
-
 .DS_Store
 
 # Image files
 *.png
+
+# Compressed files: 
+*.zip
+*.tar
