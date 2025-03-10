@@ -80,8 +80,8 @@ verifScenario.specification(normSDF)
 
 # %%
 # Add samples to the verifier
-verifDKW.samples(samplesDKW)
-verifScenario.samples(samplesScenario)
+verifDKW.addSamples(samplesDKW)
+verifScenario.addSamples(samplesScenario)
 
 # %%
 # Check if the samples satisfy the specification: 
@@ -131,7 +131,6 @@ plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 # Save and show the plot
 print('Saving plot...')
 plt.savefig('./examples/feedForwardNeuralNetwork/Figure5.png', bbox_inches='tight',format='png', dpi=600)
-plt.show()
 
 
 

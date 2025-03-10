@@ -35,7 +35,7 @@ class usingDKW:
         print(f"Confidence level (i.e. P(\sup_x(|cdfTrue(x) - cdfEmpirical(x)|) < \epsilon) >= 1-\\beta): 1-beta = {1 - self.beta}")
         _ = self.samplesRequired()
         print("Please add the specification by calling \"usingDKW.addSpecification()\" function.")
-        print("Then, add samples by calling \"usingDKW.samples()\" function.")
+        print("Then, add samples by calling \"usingDKW.addSamples()\" function.")
         print("-----------------------------------------------------------------")
 
     def empiricalCDF(self,eval):
@@ -49,7 +49,7 @@ class usingDKW:
         float: The empirical CDF value at the given evaluation point.
         """
 
-        return np.sum(self.signedDistanceFunction.eval(self.samples,eval+self.theta) <= 0)/self.samples.shape[0]
+        return np.sum(self.samples - eval <= 0)/self.samples.shape[0]
     
     def probability(self):
         # Check if the specification is satisfied
@@ -87,7 +87,7 @@ class usingDKW:
 
         levelCDF = lambda x: self.empiricalCDF(x) - 1 + self.Delta
 
-        bound = np.median(self.signedDistanceFunction.eval(self.samples, 0))
+        bound = np.median(self.samples)
 
         lb = bound - 10**np.floor(np.log10(abs(bound)))
         ub = bound + 10**np.floor(np.log10(abs(bound)))
@@ -117,7 +117,7 @@ class usingDKW:
     def specification(self,signedDistanceFunction):
         """
         This method updates the specification in the DKW approach. If the specification is updated, 
-        it prompts the user to add samples by calling the 'usingDKW.samples()' function.
+        it prompts the user to add samples by calling the 'usingDKW.addSamples()' function.
 
         Parameters:
         signedDistanceFunction (function): The signed distance function to be used for the specification.
@@ -126,14 +126,14 @@ class usingDKW:
         self.signedDistanceFunction = signedDistanceFunction
         if hasattr(self,'signedDistanceFunction'):
             print("-----------------------------------------------------------------")
-            print("Specification updated in DKW approach. Please add samples by calling 'usingDKW.samples()' function.")
+            print("Specification updated in DKW approach. Please add samples by calling 'usingDKW.addSamples()' function.")
             print("----------------------------------------------------------------")
         else: 
             print("-----------------------------------------------------------------")
-            print("Specification added in DKW approach. Please add samples by calling 'usingDKW.samples()' function.")
+            print("Specification added in DKW approach. Please add samples by calling 'usingDKW.addSamples()' function.")
             print("----------------------------------------------------------------")
 
-    def samples(self,samples):
+    def addSamples(self,samples):
         """
         This method adds the samples to the DKW approach. If the samples are added,
 
@@ -142,7 +142,7 @@ class usingDKW:
         """
         if not hasattr(self, 'signedDistanceFunction'):
             raise ValueError(f"Specification (SDF) not added. Please add the specification by calling '{self.__class__.__name__}.addSpecification()' function.")
-        self.samples = samples
+        self.samples = self.signedDistanceFunction.eval(samples,0)
 
     def samplesRequired(self):
         """
@@ -186,7 +186,7 @@ class usingScenario:
         print(f"Confidence level (i.e. P(P(g_C(f(x)) <= 0) >= 1-\Delta) >= 1-\\beta): 1-beta = {1 - self.beta}, 1-Delta = {1 - self.Delta}")
         _ = self.samplesRequired()
         print("Please add the specification by calling \"usingScenario.addSpecification()\" function.")
-        print("Then, add samples by calling \"usingScenario.samples()\" function.")
+        print("Then, add samples by calling \"usingScenario.addSamples()\" function.")
         print("-----------------------------------------------------------------")
 
     def probability(self):
@@ -233,14 +233,14 @@ class usingScenario:
         self.signedDistanceFunction = signedDistanceFunction
         if hasattr(self,'signedDistanceFunction'):
             print("-----------------------------------------------------------------")
-            print("Specification updated in scenario approach. Please add samples by calling 'usingScenario.samples()' function.")
+            print("Specification updated in scenario approach. Please add samples by calling 'usingScenario.addSamples()' function.")
             print("----------------------------------------------------------------")
         else: 
             print("-----------------------------------------------------------------")
-            print("Specification added in scenario approach. Please add samples by calling 'usingScenario.samples()' function.")
+            print("Specification added in scenario approach. Please add samples by calling 'usingScenario.addSamples()' function.")
             print("----------------------------------------------------------------")
 
-    def samples(self,samples):
+    def addSamples(self,samples):
         '''
         This method adds the samples to the Scenario approach. If the samples are added,
 
@@ -272,7 +272,7 @@ class usingScenario:
         '''
         
         if not hasattr(self, 'samples'):
-            raise ValueError("Samples not added to scenario approach. Please add the samples by calling 'usingScenario.samples()' function.")
+            raise ValueError("Samples not added to scenario approach. Please add the samples by calling 'usingScenario.addSamples()' function.")
         levelSetEval = self.signedDistanceFunction.eval(self.samples,0) - self.theta
         return np.max(levelSetEval)
 
